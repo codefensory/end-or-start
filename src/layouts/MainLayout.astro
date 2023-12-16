@@ -1,0 +1,37 @@
+---
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <style is:global>
+      @font-face {
+        font-family: RockOfTimes;
+        src: url("/fonts/Rock of Times.otf");
+      }
+
+      @font-face {
+        font-family: Swiss;
+        src: url("/fonts/Swiss721BoldOutlineBT.ttf");
+      }
+
+      @font-face {
+        font-family: Rocket;
+        src: url("/fonts/rocketpopgrad.otf");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed z-[-1] w-[100vw] h-[100vh] bg-[url(/images/background.png)] bg-cover bg-no-repeat bg-center">
+    </div>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
