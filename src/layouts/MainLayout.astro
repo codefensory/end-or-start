@@ -1,4 +1,5 @@
 ---
+import Arrows from "../components/Arrows.astro";
 import Header from "../components/Header.astro";
 ---
 
@@ -24,14 +25,36 @@ import Header from "../components/Header.astro";
         font-family: Rocket;
         src: url("/fonts/rocketpopgrad.otf");
       }
+
+      @font-face {
+        font-family: Rocket-half;
+        src: url("/fonts/rocketpophalf.otf");
+      }
+
+      @font-face {
+        font-family: OCR-A;
+        src: url("/fonts/OCR-A Regular.ttf");
+      }
     </style>
   </head>
   <body>
     <div class="fixed z-[-1] w-[100vw] h-[100vh] bg-[url(/images/background.png)] bg-cover bg-no-repeat bg-center">
+      <div class="bg-black bg-opacity-50 w-full h-full"></div>
     </div>
     <Header />
-    <main>
+    <main class="min-h-[calc(100vh-104px-48px-56px)]">
       <slot />
     </main>
+    <footer class="flex w-full h-20px bg-white bg-opacity-70 space-x-3">
+      <div class="flex-1">
+        <Arrows />
+      </div>
+      <div class="flex items-center font-bold font-swiss text-black text-md px-4">
+        <h2>© 2023 - END or START</h2>
+      </div>
+      <div class="flex-1">
+        <Arrows right />
+      </div>
+    </footer>
   </body>
 </html>

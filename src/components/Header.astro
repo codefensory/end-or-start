@@ -2,19 +2,19 @@
 import Arrows from "./Arrows.astro";
 ---
 
-<header class="w-[100vw]">
-  <div class="flex w-full bg-black bg-opacity-40 items-center justify-between p-4">
-    <div class="space-x-2 font-rock text-white text-7xl">
+<header>
+  <div class="flex w-full items-center justify-between max-lg:justify-center p-4">
+    <div class="space-x-2 font-rock text-white text-7xl max-xl:text-6xl max-sm:text-5xl">
       <span>END</span>
-      <span class="text-5xl">OR</span>
+      <span class="text-5xl max-xl:text-4xl max-sm:text-3xl">OR</span>
       <span>START</span>
     </div>
-    <div class="flex space-x-6 font-swiss text-white text-4xl">
-      <h2>HOME</h2>
-      <h2>TOURS</h2>
-      <h2>NEWS</h2>
-      <h2>DISC</h2>
-      <h2>BAND</h2>
+    <div class="flex space-x-6 font-swiss text-white text-4xl max-lg:hidden">
+      <a href="/">HOME</a>
+      <a href="/">TOURS</a>
+      <a href="/">NEWS</a>
+      <a href="/discos">DISC</a>
+      <a href="/banda">BAND</a>
     </div>
   </div>
   <div class="flex w-full h-20px bg-white bg-opacity-70 space-x-3">
@@ -32,5 +32,13 @@ import Arrows from "./Arrows.astro";
       <img src="/icons/gmail.svg" class="h-full" />
       <img src="/icons/tiktok.svg" class="h-full" />
     </div>
+  </div>
+
+  <div class="flex justify-between px-2 font-swiss text-white mt-2 text-4xl max-md:text-2xl max-sm:text-xl lg:hidden">
+    <h2>HOME</h2>
+    <h2>TOURS</h2>
+    <h2>NEWS</h2>
+    <h2>DISC</h2>
+    <h2>BAND</h2>
   </div>
 </header>

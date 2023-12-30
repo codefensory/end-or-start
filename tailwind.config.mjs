@@ -9,6 +9,8 @@ export default {
         rock: ["RockOfTimes"],
         swiss: ["Swiss"],
         rocket: ["Rocket"],
+        "rocket-half": ["Rocket-half"],
+        "ocr-a": ["OCR-A"],
       },
     },
   },

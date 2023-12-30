@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/css/splide.min.css" />
+
+<style>
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .splide__slide > img {
+    width: 80%;
+    max-width: 1000px;
+  }
+
+  .splide__arrow {
+    width: 84px;
+    height: 84px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .splide__arrow--prev {
+    background-image: url("/images/arrowL.png");
+  }
+
+  .splide__arrow--next {
+    background-image: url("/images/arrowR.png");
+  }
+</style>
+
+<section class="splide">
+  <div class="splide__arrows">
+    <button class="splide__arrow splide__arrow--prev"></button>
+    <button class="splide__arrow splide__arrow--next"></button>
+  </div>
+
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="/images/slider/image1.png" />
+      </li>
+      <li class="splide__slide">
+        <img src="/images/slider/image2.png" />
+      </li>
+      <li class="splide__slide">
+        <img src="/images/slider/image3.png" />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script is:inline src="/js/splide.min.js"></script>
+
+<script>
+  new Splide(".splide", {
+    pagination: false,
+    autoplay: true,
+    interval: 4000,
+    rewind: true,
+  }).mount();
+</script>

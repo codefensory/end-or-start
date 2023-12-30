@@ -1,9 +1,23 @@
+---
+import { customAlphabet } from "nanoid";
+
+type Props = {
+  right?: boolean;
+};
+
+const { right } = Astro.props;
+
+const nanoid = customAlphabet("1234567890abcdef", 10);
+
+const id = nanoid();
+---
+
 <svg class={"bg w-full h-7"}>
   <defs>
-    <pattern id="arrow" x="0" y="0" width="12" height="100" patternUnits="userSpaceOnUse">
-      <text x="0" y="22" class="font-rocket text-2xl">></text>
+    <pattern id={id} x="0" y="0" width="14" height="100" patternUnits="userSpaceOnUse">
+      <text x="0" y="22" class="font-rocket text-2xl">{right ? "<" : ">"}</text>
     </pattern>
   </defs>
 
-  <rect class="fill-[url(#arrow)] w-full h-full"></rect>
+  <rect class="w-full h-full" style={{ fill: `url(#${id})` }}></rect>
 </svg>

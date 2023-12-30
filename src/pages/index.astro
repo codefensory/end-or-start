@@ -1,7 +1,87 @@
 ---
+import Arrows from "../components/Arrows.astro";
+import NewContainer from "../components/NewContainer.astro";
+import Slider from "../components/Slider.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <h1>Body</h1>
+  <div class="py-12">
+    <Slider />
+  </div>
+
+  <div class="flex w-full h-20px bg-white bg-opacity-70 space-x-3">
+    <div class="font-bold font-swiss text-black text-xl ml-4">
+      <h2>NEWS</h2>
+    </div>
+    <div class="flex-1">
+      <Arrows right />
+    </div>
+  </div>
+
+  <div class="2xl:hidden p-2">
+    <NewContainer title="INICIO">
+      <p class="text-white text-center">
+        ¡Bienvenidos a la experiencia sonora de "END or START"! Fusionando la esencia del hard rock con temas
+        contemporáneos y reflexivos sobre la influencia de la tecnología. ¡Prepárense para un viaje musical que desafía
+        convencionalidades y atraviesa las dualidades del pasado y el presente alumbrando el camino hacia el inminente
+        futuro! 🎸🚀✨
+      </p>
+    </NewContainer>
+  </div>
+
+  <div class="flex max-lg:flex-wrap p-2 space-x-2">
+    <div class="flex max-2xl:hidden w-full">
+      <NewContainer title="INICIO">
+        <p class="text-white text-center">
+          ¡Bienvenidos a la experiencia sonora de "END or START"! Fusionando la esencia del hard rock con temas
+          contemporáneos y reflexivos sobre la influencia de la tecnología. ¡Prepárense para un viaje musical que
+          desafía convencionalidades y atraviesa las dualidades del pasado y el presente alumbrando el camino hacia el
+          inminente futuro! 🎸🚀✨
+        </p>
+      </NewContainer>
+    </div>
+
+    <div class="flex max-lg:mb-4 w-full">
+      <NewContainer title="DISCOS">
+        <div class="flex max-sm:flex-col max-sm:mt-4 justify-around w-full max-sm:space-y-6 max-sm:items-center">
+          <img src="/images/disco1.png" width="136px" />
+          <img src="/images/disco2.png" width="136px" />
+          <img src="/images/disco3.png" width="136px" />
+        </div>
+      </NewContainer>
+    </div>
+
+    <NewContainer title="SOCIAL MEDIA">
+      <div class="flex max-sm:flex-col justify-around items-center sm:h-[140px] max-sm:space-y-8 w-full">
+        <div class="text-center -space-y-2 font-rock text-white text-3xl rotate-[-24deg] pl-2 pr-8">
+          <div>END</div>
+          <div class="text-2xl">OR</div>
+          <div>START</div>
+        </div>
+
+        <div class="flex-1 space-y-3 max-sm:w-full">
+          <div class="flex justify-around">
+            <img src="/images/social1.svg" width="42px" />
+            <img src="/images/icons8-spotify.svg" width="42px" />
+            <img src="/images/icons8-youtube.svg" width="42px" />
+            <img src="/images/icons8-soundcloud.svg" width="42px" />
+          </div>
+          <div class="flex justify-around">
+            <img src="/images/icons8-instagram.svg" width="42px" />
+            <img src="/images/icons8-facebook.svg" width="42px" />
+            <img src="/images/icons8-twitter.svg" width="42px" />
+            <img src="/images/icons8-gmail.svg" width="42px" />
+            <img src="/images/icons8-tiktok.svg" width="42px" />
+          </div>
+        </div>
+
+        <div class="text-center -space-y-2 font-rock text-white text-3xl rotate-[-24deg] pl-8 pr-2">
+          <div>END</div>
+          <div class="text-2xl">OR</div>
+          <div>START</div>
+        </div>
+      </div>
+    </NewContainer>
+  </div>
 </MainLayout>

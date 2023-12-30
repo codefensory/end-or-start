@@ -1,0 +1,14 @@
+---
+type Props = {
+  title: string;
+  width?: string;
+  height?: string;
+};
+
+const { width, heigth, title } = Astro.props;
+---
+
+<div class="bg-[#000000BD] border border-[#707070] p-3 pt-1 w-full">
+  <h5 class="font-swiss text-xl text-white w-full text-center">{title}</h5>
+  <slot />
+</div>

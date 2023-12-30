@@ -1,0 +1,18 @@
+---
+import DiscItem from "../components/DiscItem.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="flex w-full justify-around my-12">
+    <DiscItem
+      image="/images/discos/disco1.png"
+      title="IM NOT AN ACCIDENT"
+      state="PUBLISHED"
+      date="24/11/23"
+      published
+    />
+    <DiscItem image="/images/discos/disco2.png" title="FUTURE WORLD" state="PUBLISHED" date="24/12/23" published />
+    <DiscItem image="/images/discos/disco3.png" title="DOOMSURFING" state="COMING SON" date="31/12/23" />
+  </div>
+</MainLayout>

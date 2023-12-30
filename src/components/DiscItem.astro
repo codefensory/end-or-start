@@ -1,0 +1,23 @@
+---
+type Props = {
+  image: string;
+  title: string;
+  state: string;
+  date: string;
+  published?: boolean;
+};
+
+const { image, title, state, date, published } = Astro.props;
+---
+
+<div>
+  <img class="w-[420px]" src={image} />
+  <h4 class="font-ocr-a text-white text-2xl tracking-[6px] text-center mt-2">{title}</h4>
+  <div
+    class="font-rocket-half text-3xl text-center mt-3"
+    style={{ color: published ? "#00FF00" : "#E6FF00" }}
+  >
+    <p>{state}</p>
+    <p>{date}</p>
+  </div>
+</div>
