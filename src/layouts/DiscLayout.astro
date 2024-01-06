@@ -1,0 +1,51 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<style is:inline>
+  .markdown > p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+</style>
+
+<MainLayout>
+  <div class="flex">
+    <div class="flex items-center min-w-[80px] max-lg:hidden">
+      <a href={frontmatter.prevPage}>
+        <img src="/images/arrowL.png" />
+      </a>
+    </div>
+    <div class="flex max-lg:flex-col bg-black bg-opacity-50 p-6 lg:space-x-12">
+      <div class="max-lg:max-w-[350px] max-w-[400px] m-auto">
+        <h1 class="font-ocr-a text-3xl text-white text-center mb-4 lg:hidden">{frontmatter.title}</h1>
+        <div class="relative">
+          <a href={frontmatter.prevPage} class="absolute -left-7 top-1/2 -translate-y-1/2 lg:hidden">
+            <div class="bg-[url('/images/arrowL.png')] bg-contain bg-no-repeat bg-center w-14 h-14"></div>
+          </a>
+          <img src={frontmatter.image} class="w-full max-lg:px-6" />
+          <a href={frontmatter.nextPage} class="absolute -right-7 top-1/2 -translate-y-1/2 lg:hidden">
+            <div class="bg-[url('/images/arrowR.png')] bg-contain bg-no-repeat bg-center w-14 h-14"></div>
+          </a>
+        </div>
+        <div class="space-y-2 font-ocr-a text-white text-2xl mt-4 tracking-[4px]">
+          {frontmatter.imageInfo?.map((info: any) => <p>{info}</p>)}
+        </div>
+      </div>
+      <div class="flex-1">
+        <h1 class="font-ocr-a text-5xl text-white max-lg:hidden">{frontmatter.title}</h1>
+        <div class="markdown space-y-4 mt-4">
+          <slot />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center min-w-[80px] max-lg:hidden">
+      <a href={frontmatter.nextPage}>
+        <img src="/images/arrowR.png" />
+      </a>
+    </div>
+  </div>
+</MainLayout>

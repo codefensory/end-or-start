@@ -11,6 +11,7 @@ export default {
         rocket: ["Rocket"],
         "rocket-half": ["Rocket-half"],
         "ocr-a": ["OCR-A"],
+        arial: ["Arial"],
       },
     },
   },
